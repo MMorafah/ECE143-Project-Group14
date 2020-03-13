@@ -57,7 +57,14 @@ def fetch_pages(query_val, page_num):
 
 
     mblogs = remove_duplication(mblogs)
-
+    if query_val=='冠状病毒':
+        query_val ='COVID-19'
+    if query_val=='武汉':
+        query_val ='wuhan'
+    if query_val=='肺炎':
+        query_val ='pneumonia'
+    if query_val=='口罩':
+        query_val ='face-mask'
     fp = open('result_{}.json'.format(query_val), 'w', encoding='utf-8')
     json.dump(mblogs, fp, ensure_ascii=False, indent=4)
 
