@@ -9,7 +9,7 @@
 ->pacakge used:re,json,requests
 ->location: code/scraper/weibo_scraper.py
 ->description: scrap data from weibo.com with the posts contain the word we need.
-->data generated: data generated is stored in data/RawNutritionData
+->data generated: data generated is stored in data/Weibo/
 ```
 
 2. XXX
@@ -47,7 +47,7 @@
 4. Weibo-Word Cloud
 ```
 ->pacakge used: json,jieba.analyse,matplotlib,Image,WordCloud,numpy
-->data: form data we get from code/scraper/weibo_scraper.py  and with code/visualizations/original.png
+->data: form data/Weibo/
 ->location: code/visualizations/weibo_cloud.py 
 ->description: for a given key word, create a word cloud shows the highly related words
 ```
