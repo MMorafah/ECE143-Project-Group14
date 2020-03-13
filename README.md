@@ -4,10 +4,10 @@
 ### RAW Data: https://www.kaggle.com/brendaso/2019-coronavirus-dataset-01212020-01262020
 
 - ### Data Scrap:
-1. XXX
->pacakge used:
->location: 
->description: 
+1. Weibo
+>pacakge used:re,json,requests
+>location: code/scraper/weibo_scraper.py
+>description: scrap data from weibo.com with the posts contain the word we need.
 >data generated: data generated is stored in data/RawNutritionData
 
 2. XXX
@@ -41,6 +41,13 @@
 ->data: data of fataitily and transimissionbility of diseases other than COVID-19 are from Internet
 ->location: code/visualizations/comparation_of_diseases.py
 ->description: visualize the comparation of fatality and transmission between differrent diseases. The graph generated is interactive.
+```
+4. Weibo-Word Cloud
+```
+->pacakge used: json,jieba.analyse,matplotlib,Image,WordCloud,numpy
+->data: form data we get from code/scraper/weibo_scraper.py
+->location: code/visualizations/weibo_cloud.py 
+->description: for a given key word, create a word cloud shows the highly related words
 ```
 
 
