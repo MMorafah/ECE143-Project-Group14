@@ -41,6 +41,8 @@ def gen_img(texts, img_file):
 
 if __name__ == '__main__':
     keyword = '冠状病毒'
+    if keyword=='冠状病毒':
+        keyword ='COVID-19'
     mblogs = json.loads(open('result_{}.json'.format(keyword), 'r', encoding='utf-8').read())
 
     words = []
@@ -51,8 +53,10 @@ if __name__ == '__main__':
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, '冠状病毒.png')
+    gen_img(words, 'original.png')
     keyword = '武汉'
+    if keyword=='武汉':
+        keyword ='wuhan'
     mblogs = json.loads(open('result_{}.json'.format(keyword), 'r', encoding='utf-8').read())
     for i in delete_word:
         while i in words:
@@ -64,8 +68,10 @@ if __name__ == '__main__':
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, '武汉.png')
+    gen_img(words, 'original.png')
     keyword = '口罩'
+    if keyword=='口罩':
+        keyword ='face-mask'
     mblogs = json.loads(open('result_{}.json'.format(keyword), 'r', encoding='utf-8').read())
     for i in delete_word:
         while i in words:
@@ -77,8 +83,10 @@ if __name__ == '__main__':
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, '口罩.png')
+    gen_img(words, 'original.png')
     keyword = '肺炎'
+    if keyword=='肺炎':
+        keyword ='pneumonia'
     mblogs = json.loads(open('result_{}.json'.format(keyword), 'r', encoding='utf-8').read())
     words = []
     for blog in mblogs:
@@ -86,4 +94,4 @@ if __name__ == '__main__':
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, '肺炎.png')
+    gen_img(words, 'original.png')
