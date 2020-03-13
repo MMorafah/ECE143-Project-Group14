@@ -5,10 +5,12 @@
 
 - ### Data Scrap:
 1. Weibo
->pacakge used:re,json,requests
->location: code/scraper/weibo_scraper.py
->description: scrap data from weibo.com with the posts contain the word we need.
->data generated: data generated is stored in data/RawNutritionData
+```
+->pacakge used:re,json,requests
+->location: code/scraper/weibo_scraper.py
+->description: scrap data from weibo.com with the posts contain the word we need.
+->data generated: data generated is stored in data/RawNutritionData
+```
 
 2. XXX
 
