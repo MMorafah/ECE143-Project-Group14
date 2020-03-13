@@ -87,7 +87,7 @@ def seir_model(N, Initial_data, data, name):
 
 
 N = 58000000
-data = list(pd.read_csv('pd.read_csv', header = None))
+data = list(pd.read_csv('../../data/', header = None))
 seir_model(N, [N,0,0,0], data[:25], 'No_action')
 seir_model(N, [N-2762-20-152,20000,2762,152], data[25:41], 'Traffic')
 seir_model(N, [N-46057-20000-4769,20000,43437,4769], data[41:], 'New_Hospital')
