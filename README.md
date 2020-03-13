@@ -47,7 +47,7 @@
 4. Weibo-Word Cloud
 ```
 ->pacakge used: json,jieba.analyse,matplotlib,Image,WordCloud,numpy
-->data: form data we get from code/scraper/weibo_scraper.py
+->data: form data we get from code/scraper/weibo_scraper.py  and with code/visualizations/original.png
 ->location: code/visualizations/weibo_cloud.py 
 ->description: for a given key word, create a word cloud shows the highly related words
 ```
