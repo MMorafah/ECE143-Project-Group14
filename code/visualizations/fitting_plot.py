@@ -5,7 +5,7 @@ import numpy as np
 
 def fit_plot():
     '''
-    visualize the fitting infected number of people an ral infected number
+    visualize the fitting infected number of people 
     '''
     # initialization
     # load data 
