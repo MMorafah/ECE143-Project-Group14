@@ -39,7 +39,7 @@ def gen_img(texts, img_file):
     wc.to_file(img_file.split('.')[0] + '_wc.png')
 
 
-if __name__ == '__main__':
+def main():
     keyword = '冠状病毒'
     if keyword=='冠状病毒':
         keyword ='COVID-19'
@@ -95,3 +95,7 @@ if __name__ == '__main__':
         while i in words:
             words.remove(i)
     gen_img(words, 'original.png')
+
+    
+if __name__ == '__main__':
+    main()
