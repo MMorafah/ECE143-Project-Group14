@@ -66,7 +66,7 @@ notice: Due to the GitHub Pages environment, the .ipynb cannot display the HTML 
 ->description: create a line plot of the google trends data
 ```
 
-7. Population Data Curv Fitting plot
+7. Population Data Curve Fitting plot
 ```
 ->pacakge used: pandas, matplotlib, numpy
 ->data: form data/population_data/population_data.xlsx
