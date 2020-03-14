@@ -101,7 +101,7 @@ def main():
     for i in delete_word:
         while i in words:
             words.remove(i)#clean data
-    gen_img(words, '../../data/Weibo/voriginal.png',keyword)
+    gen_img(words, '../../data/Weibo/original.png',keyword)
 
     
 if __name__ == '__main__':
