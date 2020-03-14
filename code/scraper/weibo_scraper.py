@@ -65,7 +65,7 @@ def fetch_pages(query_val, page_num):
         query_val ='pneumonia'
     if query_val=='口罩':
         query_val ='face-mask'
-    fp = open('result_{}.json'.format(query_val), 'w', encoding='utf-8')
+    fp = open('../../data/Weibo/result_{}.json'.format(query_val), 'w', encoding='utf-8')
     json.dump(mblogs, fp, ensure_ascii=False, indent=4)
 
 
