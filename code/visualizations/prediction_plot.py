@@ -13,7 +13,7 @@ def prediction_plot():
     data_3 = pd.read_csv('../../data/prediction_data/newhospital.txt', header = None)
     recover_2 = pd.read_csv('../../data/prediction_data/traffic_recover.txt', header = None)
     recover_3 = pd.read_csv('../../data/prediction_data/newhospital_recover.txt', header = None)
-    real_infected = pd.read_csv('../../data/prediction_data/real_infected_data_of_Hubei.csv', header = None)
+    real_infected = pd.read_csv('../../data/real_population_data/real_infected_data_of_Hubei.csv', header = None)
 
     assert isinstance(data_1, pd.DataFrame)
     assert isinstance(data_2, pd.DataFrame)
