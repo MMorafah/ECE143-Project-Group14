@@ -56,7 +56,7 @@
 ```
 ->pacakge used: pandas, numpy, matplotlib, geopandas, datetime, ipywidgets, shapely
 ->data: form data/map_data/
-->location: code/visualizations/ (plotter.py, format_flatten.py and add_gaussian_noise.py)
+->location: code/visualizations/map_plot.py
 ->description: plot the confirmed case data on a map
 ```
 
@@ -64,7 +64,7 @@
 ```
 ->pacakge used: pandas, matplotlib
 ->data: form data/trends_data/
-->location: N/A
+->location: code/visualizations/trend_plot.py
 ->description: create a line plot of the google trends data
 ```
 
