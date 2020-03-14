@@ -20,7 +20,7 @@ def keywords(mblogs):
     return text
 
 
-def gen_img(texts, img_file):
+def gen_img(texts, img_file,name):
     data = ' '.join(text for text in texts)
     image_coloring = Image.open(img_file)
     image_coloring = np.asanyarray(image_coloring)
@@ -31,12 +31,12 @@ def gen_img(texts, img_file):
     )
     wc.generate(data)
 
-    # plt.figure()
-    # plt.imshow(wc, interpolation="bilinear")
-    # plt.axis("off")
-    # plt.show()
+    plt.figure()
+    plt.imshow(wc, interpolation="bilinear")
+    plt.axis("off")
+    plt.show()
 
-    wc.to_file(img_file.split('.')[0] + '_wc.png')
+    wc.to_file('../../data/Weibo'+name + '_wc.png')
 
 
 def main():
@@ -53,7 +53,7 @@ def main():
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, 'original.png')
+    gen_img(words, '../../data/Weibo/original.png',keyword)
     keyword = '武汉'
     if keyword=='武汉':
         keyword ='wuhan'
@@ -68,7 +68,7 @@ def main():
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, 'original.png')
+    gen_img(words, '../../data/Weibo/original.png',keyword)
     keyword = '口罩'
     if keyword=='口罩':
         keyword ='face-mask'
@@ -83,7 +83,7 @@ def main():
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, 'original.png')
+    gen_img(words, '../../data/Weibo/original.png',keyword)
     keyword = '肺炎'
     if keyword=='肺炎':
         keyword ='pneumonia'
@@ -94,7 +94,7 @@ def main():
     for i in delete_word:
         while i in words:
             words.remove(i)
-    gen_img(words, 'original.png')
+    gen_img(words, '../../data/Weibo/voriginal.png',keyword)
 
     
 if __name__ == '__main__':
