@@ -68,4 +68,12 @@
 ->description: create a line plot of the google trends data
 ```
 
+7. Population Data Curve Fitting plot
+```
+->pacakge used: pandas, matplotlib, numpy
+->data: form data/population_data/population_data.xlsx
+->location: code/visualizations/vis_curve_fit.py
+->description: curve fit to the real population data for Hubei 
+```
+
 
