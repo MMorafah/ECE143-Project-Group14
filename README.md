@@ -23,14 +23,14 @@
 ```
 
 - ### Visualization:
-1. real data fitting
+1. Real data fitting
 ```
 ->pacakge used: plotly, pandas, numpy
 ->location: code/visualizations/fitting_plot.py
 ->description: visualize the fitting infected number of people. The graph generated is interactive.
 ```
 
-2. prediction of future infected and recovered people
+2. Prediction of future infected and recovered people
 ```
 ->pacakge used: plotly, pandas, numpy
 ->location: code/visualizations/prediction_plot.py
