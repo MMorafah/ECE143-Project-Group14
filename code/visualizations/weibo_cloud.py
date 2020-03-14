@@ -26,6 +26,9 @@ def gen_img(texts, img_file,name):
     img_file:input photo address
     name: file name to save word cloud
     '''
+    assert isinstance(texts,list)
+    assert isinstance(img_file,str)
+    assert isinstance(name,str)
     data = ' '.join(text for text in texts)
     image_coloring = Image.open(img_file)
     image_coloring = np.asanyarray(image_coloring)
