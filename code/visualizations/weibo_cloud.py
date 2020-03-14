@@ -21,6 +21,11 @@ def keywords(mblogs):
 
 
 def gen_img(texts, img_file,name):
+    '''
+    text:input string list
+    img_file:input photo address
+    name: file name to save word cloud
+    '''
     data = ' '.join(text for text in texts)
     image_coloring = Image.open(img_file)
     image_coloring = np.asanyarray(image_coloring)
