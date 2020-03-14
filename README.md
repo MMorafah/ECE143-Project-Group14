@@ -2,7 +2,7 @@
 ## Analysis and Prediction of Novel Coronavirus (COVID-19) Cases
 
 ### RAW Data: https://www.kaggle.com/brendaso/2019-coronavirus-dataset-01212020-01262020
-
+notice: Due to the GitHub Pages environment, the .ipynb cannot display the HTML content in the notebook and repainting is needed.
 - ### Data Scrape:
 1. Weibo
 ```
@@ -11,8 +11,6 @@
 ->description: scrap data from weibo.com with the posts contain the word we need.
 ->data generated: data generated is stored in data/Weibo/
 ```
-
-2. XXX
 
 - ### Data Modeling:
 ```
