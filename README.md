@@ -1,4 +1,4 @@
-# ECE143-Project-
+# ECE143-Project-Group-14
 ## Analysis and Prediction of Novel Coronavirus (COVID-19) Cases
 
 ### RAW Data: https://www.kaggle.com/brendaso/2019-coronavirus-dataset-01212020-01262020
