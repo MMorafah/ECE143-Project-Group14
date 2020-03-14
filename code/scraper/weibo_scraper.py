@@ -8,7 +8,10 @@ url_template = "https://m.weibo.cn/api/container/getIndex?type=wb&queryVal={}&co
 
 
 def clean_text(text):
-
+    '''
+    test: input str
+    '''
+    assert isinstance(texts,str)
     dr = re.compile(r'(<)[^>]+>', re.S)
     dd = dr.sub('', text)
     dr = re.compile(r'#[^#]+#', re.S)
@@ -19,6 +22,13 @@ def clean_text(text):
 
 
 def fetch_data(query_val, page_id):
+    '''
+    query_val:keywords
+    page_id:page id
+    '''
+    assert isinstance(query_val,str)
+    assert isinstance(page_id,int)
+    assert page_id>0
     resp = requests.get(url_template.format(query_val, query_val, page_id))
     card_group = json.loads(resp.text)['data']['cards'][0]['card_group']
 
@@ -38,6 +48,11 @@ def fetch_data(query_val, page_id):
 
 
 def remove_duplication(mblogs):
+    '''
+    remove duplication by 'mid'
+    mblogs:list of dict
+    '''
+    assert isinstance(mblogs,mblogs)
     mid_set = {mblogs[0]['mid']}
     new_blogs = []
     for blog in mblogs[1:]:
@@ -48,6 +63,13 @@ def remove_duplication(mblogs):
 
 
 def fetch_pages(query_val, page_num):
+    '''
+    query_val:keywords
+    page_num:total fetch page number
+    '''
+    assert isinstance(query_val,str)
+    assert isinstance(page_num,int)
+    assert page_num>0
     mblogs = []
     for page_id in range(1 + page_num + 1):
         try:
@@ -56,7 +78,8 @@ def fetch_pages(query_val, page_num):
             print(e)
 
 
-    mblogs = remove_duplication(mblogs)
+    mblogs = remove_duplication(mblogs)#remove duplication
+    #translate
     if query_val=='冠状病毒':
         query_val ='COVID-19'
     if query_val=='武汉':
@@ -65,8 +88,8 @@ def fetch_pages(query_val, page_num):
         query_val ='pneumonia'
     if query_val=='口罩':
         query_val ='face-mask'
-    fp = open('../../data/Weibo/result_{}.json'.format(query_val), 'w', encoding='utf-8')
-    json.dump(mblogs, fp, ensure_ascii=False, indent=4)
+    fp = open('../../data/Weibo/result_{}.json'.format(query_val), 'w', encoding='utf-8')#open file
+    json.dump(mblogs, fp, ensure_ascii=False, indent=4)#save result
 
 
 if __name__ == '__main__':
