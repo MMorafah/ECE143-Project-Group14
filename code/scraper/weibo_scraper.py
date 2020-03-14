@@ -11,7 +11,7 @@ def clean_text(text):
     '''
     test: input str
     '''
-    assert isinstance(texts,str)
+    assert isinstance(text,str)
     dr = re.compile(r'(<)[^>]+>', re.S)
     dd = dr.sub('', text)
     dr = re.compile(r'#[^#]+#', re.S)
@@ -52,7 +52,7 @@ def remove_duplication(mblogs):
     remove duplication by 'mid'
     mblogs:list of dict
     '''
-    assert isinstance(mblogs,mblogs)
+    assert isinstance(mblogs,list)
     mid_set = {mblogs[0]['mid']}
     new_blogs = []
     for blog in mblogs[1:]:
