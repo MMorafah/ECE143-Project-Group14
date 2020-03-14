@@ -12,13 +12,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def keywords(mblogs):
-    text = []
-    for blog in mblogs:
-        keyword = jieba.analyse.extract_tags(blog['text'])
-        text.extend(keyword)
-    return text
-
 
 def gen_img(texts, img_file,name):
     '''
@@ -48,6 +41,7 @@ def gen_img(texts, img_file,name):
 
 
 def main():
+    # for COVID-19
     keyword = '冠状病毒'
     if keyword=='冠状病毒':
         keyword ='COVID-19'
@@ -61,7 +55,7 @@ def main():
             words.remove(i)#clean data
     gen_img(words, '../../data/Weibo/original.png',keyword)
     
-    
+    # for wuhan
     keyword = '武汉'
     if keyword=='武汉':
         keyword ='wuhan'
@@ -77,7 +71,7 @@ def main():
             words.remove(i)#clean data
     gen_img(words, '../../data/Weibo/original.png',keyword)
     
-    
+    # for face mask
     keyword = '口罩'
     if keyword=='口罩':
         keyword ='face-mask'
@@ -93,7 +87,7 @@ def main():
             words.remove(i)#clean data
     gen_img(words, '../../data/Weibo/original.png',keyword)
     
-    
+    # for pneumonia
     keyword = '肺炎'
     if keyword=='肺炎':
         keyword ='pneumonia'
