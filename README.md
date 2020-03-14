@@ -52,7 +52,20 @@
 ->description: for a given key word, create a word cloud shows the highly related words
 ```
 
+5. Infection map
+```
+->pacakge used: pandas, numpy, matplotlib, geopandas, datetime, ipywidgets, shapely
+->data: form data/map_data/
+->location: code/visualizations/ (plotter.py, format_flatten.py and add_gaussian_noise.py)
+->description: plot the confirmed case data on a map
+```
 
-
+6. Trends plot
+```
+->pacakge used: pandas, matplotlib
+->data: form data/trends_data/
+->location: N/A
+->description: create a line plot of the google trends data
+```
 
 
