@@ -10,9 +10,9 @@ def fit_plot():
     # initialization
     # load data 
     data_1 = pd.read_csv('../../data/prediction_data/no action.txt', header = None)
-    data_2 = pd.read_csv('../../data/prediction_data//traffic.txt', header = None)
-    data_3 = pd.read_csv('../../data/prediction_data//newhospital.txt', header = None)
-    real_infected = pd.read_csv('../../data/prediction_data//real_infected_data_of_Hubei.csv', header = None)
+    data_2 = pd.read_csv('../../data/prediction_data/traffic.txt', header = None)
+    data_3 = pd.read_csv('../../data/prediction_data/newhospital.txt', header = None)
+    real_infected = pd.read_csv('../../data/prediction_data/real_infected_data_of_Hubei.csv', header = None)
     assert isinstance(data_1, pd.DataFrame)
     assert isinstance(data_2, pd.DataFrame)
     assert isinstance(data_3, pd.DataFrame)
